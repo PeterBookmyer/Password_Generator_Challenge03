@@ -1,0 +1,21 @@
+Button functionality: addeventlistener - "click"
+
+Generates random array of numbers and letters with the .length based on user input.
+
+Use prompts to determine first - "do you want to generate a random password"
+
+second - "how long would you like your password (8-128 characters)
+
+third - "would you like to include special characters?"
+
+forth - "would you like to include numbers?"
+
+fifth - "would you like to include upper case?"
+
+password based on this criteria appears in text area
+
+concat arrays based on user selection to the infinite
+
+generate random subset of that array based on pword length numbers
+
+spit that out in box
