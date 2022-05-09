@@ -37,11 +37,15 @@ function generatePassword() {
         console.log (passArray)
     }
      else if (pwordCharacters && useUpperCase && useNumbers) {
-        var passArray = specialCharacters.concat(upperCase, numbers)
+        var passArray = upperCase.concat(specialCharacters, numbers)
+        console.log (passArray)
+    }
+    else if (pwordCharacters && useLowerCase && useNumbers) {
+        var passArray = lowerCase.concat(specialCharacters, numbers)
         console.log (passArray)
     }
      else if (pwordCharacters && useNumbers) {
-        var passArray = specialCharacters.concat(numbers)
+        var passArray = numbers.concat(numbers)
         console.log (passArray)
     }
     else if (useUpperCase && useNumbers) {
@@ -57,15 +61,15 @@ function generatePassword() {
         console.log (passArray)
     }
 
-    let password = "";
-    var passAmount = passArray.length
-    pwordLength = parseInt(pwordLength)
+    let password2 = "";
+    var passAmount = parseInt(pwordLength)
     for (var i=0; i<pwordLength; i++) {
-    password += passArray.charAt(Math.floor(Math.random * passAmount))
+    password2 += passArray.charAt(Math.floor(Math.random * passAmount))
     }
     
-    console.log (password);
-    return password;
+    console.log (password2);
+
+    return password2;
 
 };
 
@@ -77,6 +81,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  passwordText.value = password;
 
 }
 
